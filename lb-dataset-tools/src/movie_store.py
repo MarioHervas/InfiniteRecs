@@ -19,9 +19,6 @@ class MovieStore:
     def to_dataframe(self) -> pd.DataFrame:
         return pd.DataFrame.from_dict(self.store, orient="index").reset_index(drop=True)
 
-    def to_dataframe(self) -> pd.DataFrame:
-        return pd.DataFrame.from_dict(self.store, orient="index").reset_index(drop=True)
-
     def _save(self) -> None:
         with open(self.store_path, "w", encoding="utf-8") as f:
             json.dump(self.store, f, indent=2, ensure_ascii=False)
