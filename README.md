@@ -64,7 +64,7 @@ ETSISI - Universidad Politécnica de Madrid
 
 Contains the data pipeline used to create the training dataset.
 
-The pipeline reads Letterboxd export ZIP files, extracts user ratings, normalizes ratings, enriches movies with TMDB metadata, retrieves Letterboxd nanogenres, applies BERTopic to movie overviews, and exports the final CSV files used by the model.
+The pipeline reads Letterboxd export ZIP files, extracts user ratings, normalises ratings, enriches movies with TMDB metadata, retrieves Letterboxd nanogenres, applies BERTopic to movie overviews, and exports the final CSV files used by the model.
 
 Main output files:
 
@@ -363,7 +363,7 @@ The dataset pipeline performs the following steps:
 
 1. Reads Letterboxd ZIP exports from `lb-dataset-tools/zips/`.
 2. Extracts `ratings.csv`, `diary.csv`, `watched.csv`, and optionally `watchlist.csv` and `reviews.csv`.
-3. Normalizes ratings from the Letterboxd 0.5-5 scale into a 0-1 range.
+3. normalises ratings from the Letterboxd 0.5-5 scale into a 0-1 range.
 4. Queries TMDB to retrieve metadata such as genres, overview, director, country, release year and TMDB ID.
 5. Scrapes Letterboxd nanogenres for each movie.
 6. Stores intermediate movie metadata in `movie_store.json`.
