@@ -55,7 +55,7 @@ class DatasetConstructor:
                 "overview": details["overview"],
                 "country": details["country"],
                 "nanogenres": "|".join(nanogenres),
-                "themes": "",  # se rellena en la fase BERTopic (BertopicEnricher)
+                "themes": "", 
                 "lb_url": movie["Letterboxd URI"],
             }
 

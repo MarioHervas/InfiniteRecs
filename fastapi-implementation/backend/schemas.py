@@ -31,7 +31,7 @@ class UserFavorite(BaseModel):
 
 class RecommendationResponse(BaseModel):
     username: Optional[str]
-    scenario: str  # "A" (conocido) o "B" (cold-start)
+    scenario: str 
     n_total_ratings: int
     n_in_catalog: int
     n_out_catalog: int
