@@ -373,9 +373,16 @@ The dataset pipeline performs the following steps:
 
 ## Nanogenre scraping note
 
-The nanogenre scraper depends on Letterboxd pages and cookies.
+The dataset pipeline can retrieve Letterboxd nanogenres by scraping public movie pages.  
+However, depending on Letterboxd access restrictions, the scraper may require valid browser cookies from a Letterboxd session.
 
-The file:
+To generate the required `cookies.json` file:
+
+1. Log in to Letterboxd from your browser.
+2. Install a browser extension such as **Cookie-Editor**.
+3. Open Letterboxd in the browser.
+4. Use Cookie-Editor to export the cookies in JSON format.
+5. Save the exported content as:
 
 ```text
 lb-dataset-tools/cookies.json
@@ -411,18 +418,6 @@ fastapi-implementation/backend/checkpoint.pt
 ```
 
 The notebook uses a temporal validation split and stores the evaluation metrics inside the checkpoint.
-
-The included checkpoint metadata reports:
-
-```text
-Model version: v3
-Users: 20
-Movies used by checkpoint: 3851
-Embedding dimension: 128
-Hidden dimension: 256
-Precision@10: 0.4550
-Recall@10: 0.0744
-```
 
 ## Running the evaluation notebook
 
@@ -485,9 +480,9 @@ Contains user-rating interactions. Main columns include:
 
 ## Privacy notes
 
-Raw Letterboxd ZIP exports are not included in this repository for privacy reasons.
+Raw Letterboxd ZIP exports are not included in this repository for privacy reasons. Usernames and interactions are offered with permission of the participating users.
 
-Folders that may contain private user exports should remain empty in public versions of the repository:
+Folders that may contain private user exports are empty:
 
 ```text
 lb-dataset-tools/zips/
