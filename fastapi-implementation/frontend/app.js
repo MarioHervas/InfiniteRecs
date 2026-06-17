@@ -6,7 +6,7 @@ const API = {
 };
 
 const BATCH_SIZE = 5;       
-
+const STAGGER_MS = 120;
 
 const $form          = document.getElementById("upload-form");
 const $dropzone      = document.getElementById("dropzone");
